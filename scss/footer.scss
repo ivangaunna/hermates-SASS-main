@@ -1,0 +1,102 @@
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 10rem;
+    .rrss{
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        width: 11rem;
+        margin-top: 1.9rem;
+        margin-left: 2rem;
+        height: 3rem;
+        padding: 1rem;
+        i{
+            margin-right: 30px;
+        }
+    }
+    i{
+        font-size: 2rem;
+        text-decoration: none;
+        color: white;
+        transition: .3s;
+        &:hover{
+            padding-top: 1rem;
+        }
+    }
+    .mateo{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+        width: 13rem;
+        button{
+            background-color: black;
+            border: 3px solid white;
+            width: 8rem;
+            height: 3rem;
+            border-radius: 10px;
+            &:hover{
+                background-color: white;
+                color: black;
+                padding: 1rem;
+                padding-left: 2.7rem;
+                padding-right: 3rem;
+                border-radius: 8px; 
+            }
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255); 
+            }
+        }
+    }
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        margin: 2rem;
+        height: 3rem;
+        padding: 1rem;
+        border-radius: 20px;
+        color: white;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 768px){
+          footer{
+            display: grid;
+            grid-template-areas: 
+            "mateo"
+            "rrss";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+          }
+          .rrss{
+            grid-area: rrss;
+            display: flex;
+            justify-content:center ;
+            width: 75%;
+            margin-top: 2%;
+          }
+          i{
+            font-size: 30px;
+            margin-left: 10px;
+          }
+          .mateo{
+            grid-area: mateo;
+            display: flex;
+            justify-content: center;
+            margin-left: 5.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+          }
+          .contacto{
+            grid-area: contacto;
+            display: none;
+          }
+          .contacto h3{
+            display: none;
+          }
+      
+      }
+    
+}

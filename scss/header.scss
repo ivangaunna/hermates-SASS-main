@@ -1,0 +1,85 @@
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "perroImg"
+    "nav-bar";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    height: 12rem;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    .Img{
+        grid-area: Img;
+        width: 12rem;
+        margin-left: 1rem;
+    }
+    nav{
+        .nav-bar{
+            grid-area: nav-bar;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 5rem;
+            margin-right: 1rem;
+            li{
+                margin: 1rem;
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.3rem;
+                    transition: .6s;
+                    &:hover{
+                        color:  black;
+                        font-size: 1.3rem;
+                        background-color: orange;
+                        padding: .6rem;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 0px) and (max-width: 768px){
+        .perroLogoImg{
+            display: flex;
+            justify-content: center;
+            width: 190%;
+            .perroImg{
+                display: flex;
+                width: 10rem;
+                height: 10rem;
+            }
+        }   
+          nav{
+              display: flex;
+              justify-content: flex-start;
+              ul{
+                display: flex;
+                text-align: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: -12rem;
+                margin-right: -8rem;
+                padding-top: 2.1rem;
+                li{
+                    font-size: 2rem;
+                    a{
+                        font-size: 0.9rem;
+                        &:hover{
+                            color:  black;
+                            font-size: 1.3rem;
+                            background-color: orange;
+                            padding: .6rem;
+                            border-radius: 10px;
+                          }
+                    }
+                }
+            }
+          }
+      }
+}

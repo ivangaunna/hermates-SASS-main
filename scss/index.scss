@@ -1,0 +1,44 @@
+main{
+    grid-area: main;
+    background: linear-gradient(140deg,
+     rgba(2,0,36,1) -3rem, rgba(255,169,0,1) 2rem, 
+     rgba(71,47,0,1) 100%, rgba(0,0,0,1) 100%,
+      rgba(0,212,255,1) 100%);
+    h1{
+        text-align: center;
+        margin: 2rem;
+    }
+    h2{
+        text-align: center; 
+    }
+    p{
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .grid-index{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "video-index"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    .main--video--perros{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+       
+    }
+    .index-text{
+        background-color: whitesmoke;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    
+    }
+}

@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: black; }
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "Img"
+ "nav-bar";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  height: 12rem;
+  background-color: lightgray;
+  width: 100%; }
+  header .Img {
+    grid-area: Img;
+    width: 12rem;
+    margin-left: 1rem; }
+  header nav .nav-bar {
+    grid-area: nav-bar; }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 5rem;
+    margin-right: 1rem; }
+    header nav ul li {
+      margin: 1rem;
+      list-style: none; }
+      header nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+        transition: .6s; }
+        header nav ul li a:hover {
+          color: black;
+          font-size: 1.3rem;
+          background-color: orange;
+          padding: .6rem;
+          border-radius: 10px; }
+  @media only screen and (min-width: 0px) and (max-width: 768px) {
+    header .LogoImg {
+      display: flex;
+      justify-content: center;
+      width: 190%; }
+      header .LogoImg .Img {
+        display: flex;
+        width: 10rem;
+        height: 10rem; }
+    header nav {
+      display: flex;
+      justify-content: flex-start; }
+      header nav ul {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -12rem;
+        margin-right: -8rem;
+        padding-top: 2.1rem; }
+        header nav ul li {
+          font-size: 2rem; }
+          header nav ul li a {
+            font-size: 0.9rem; }
+            header nav ul li a:hover {
+              color: black;
+              font-size: 1.3rem;
+              background-color: orange;
+              padding: .6rem;
+              border-radius: 10px; } }
+
+main {
+  grid-area: main;
+  background: linear-gradient(140deg, #020024 -3rem, #ffa900 2rem, #472f00 100%, black 100%, #00d4ff 100%); }
+  main h1 {
+    text-align: center;
+    margin: 2rem; }
+  main h2 {
+    text-align: center; }
+  main p {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem; }
+  main .grid-index {
+    display: grid;
+    grid-template-areas: "header"
+ "main"
+ "video-index"
+ "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto; }
+  main .main--video--perros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 10px; }
+  main .index-text {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; }
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 10rem; }
+  footer .rrss {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    width: 11rem;
+    margin-top: 1.9rem;
+    margin-left: 2rem;
+    height: 3rem;
+    padding: 1rem; }
+    footer .rrss i {
+      margin-right: 30px; }
+  footer i {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: .3s; }
+    footer i:hover {
+      padding-top: 1rem; }
+  footer .mateo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    width: 13rem; }
+    footer .mateo button {
+      background-color: black;
+      border: 3px solid white;
+      width: 8rem;
+      height: 3rem;
+      border-radius: 10px; }
+      footer .mateo button:hover {
+        background-color: white;
+        color: black;
+        padding: 1rem;
+        padding-left: 2.7rem;
+        padding-right: 3rem;
+        border-radius: 8px; }
+      footer .mateo button a {
+        text-decoration: none;
+        color: white; }
+  footer .contacto {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    color: white; }
+  @media only screen and (min-width: 0px) and (max-width: 768px) {
+    footer footer {
+      display: grid;
+      grid-template-areas: "mateo"
+ "rrss";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto; }
+    footer .rrss {
+      grid-area: rrss;
+      display: flex;
+      justify-content: center;
+      width: 75%;
+      margin-top: 2%; }
+    footer i {
+      font-size: 30px;
+      margin-left: 10px; }
+    footer .mateo {
+      grid-area: mateo;
+      display: flex;
+      justify-content: center;
+      margin-left: 5.5rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem; }
+    footer .contacto {
+      grid-area: contacto;
+      display: none; }
+    footer .contacto h3 {
+      display: none; } }
